@@ -1,56 +1,90 @@
 .login-container {
   max-width: 350px;
-  margin: 60px auto;
-  padding: 32px 24px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 16px rgba(60, 60, 60, 0.08);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 70px auto;
+  padding: 36px 38px; 
+  background: linear-gradient(120deg, #e3f0ff 0%, #f9fafe 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(30, 60, 90, 0.10);
+  font-family: 'Montserrat', Arial, sans-serif;
 }
 
 .login-container h2 {
   text-align: center;
-  margin-bottom: 24px;
-  color: #3a3a3a;
-  font-weight: 500;
+  margin-bottom: 28px;
+  color: #2a4d69;
+  font-weight: 700;
+  letter-spacing: 1.5px;
 }
 
 .login-container label {
   display: block;
-  margin-bottom: 6px;
-  color: #5a5a5a;
+  margin-bottom: 8px;
+  color: #3e5c76;
   font-size: 15px;
+  font-weight: 500;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .login-container input {
-  width: 100%;
-  padding: 10px 12px;
-  margin-bottom: 18px;
-  border: 1px solid #e0e0e0;
-  border-radius: 6px;
-  background: #fafafa;
+  width: 90%;         
+  min-width: 0;
+  padding: 11px 13px;
+  margin-bottom: 0px;
+  border: 1.5px solid #b3c6e0;
+  border-radius: 8px;
+  background: #f4f8fb;
   font-size: 15px;
-  transition: border 0.2s;
+  transition: border 0.2s, box-shadow 0.2s;
 }
 
 .login-container input:focus {
-  border-color: #8bc34a;
+  border-color: #4f8edc;
+  box-shadow: 0 0 0 2px #cfe2ff;
   outline: none;
 }
 
 .login-container button {
   width: 100%;
-  padding: 10px 0;
-  background: #8bc34a;
+  padding: 12px 0;
+  background: linear-gradient(90deg, #4f8edc 60%, #6fc3df 100%);
   color: #fff;
   border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: 500;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.1s;
+  box-shadow: 0 2px 8px rgba(79, 142, 220, 0.08);
 }
 
 .login-container button:hover {
-  background: #689f38;
+  background: linear-gradient(90deg, #357ab8 60%, #4f8edc 100%);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.titulo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+  padding: 28px 0 20px 0; 
+  background: linear-gradient(90deg, #e3f0ff 60%, #f9fafe 100%);
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(30, 60, 90, 0.07);
+}
+
+.titulo h1 {
+  color: #2a4d69;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  margin: 0;
+  text-align: center;
 }

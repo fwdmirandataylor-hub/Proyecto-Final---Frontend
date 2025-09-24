@@ -5,6 +5,12 @@ function Login() {
     return (
         <div>
 
+            <div className='titulo'>
+
+                <h1>Bienvenido a SwapBook 📚</h1>
+
+            </div>
+
             <div className='login-container'>
 
                 <h2>Iniciar Sesión</h2>

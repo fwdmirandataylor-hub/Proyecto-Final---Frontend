@@ -1,3 +1,5 @@
-body{
-    background: linear-gradient(red blue)
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(120deg, #b2dfdb 0%, #fce4ec 100%);
 }

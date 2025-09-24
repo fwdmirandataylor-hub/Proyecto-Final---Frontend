@@ -1,14 +1,12 @@
-import Login from './components/login';
-import '../src/styles/App.css'
+import Routing from './routes/Routing';
 
 function App() {
   return (
     <div>
-      <body>
-        <Login />
-      </body>
+      <Routing />
     </div>
   );
 }
 
 export default App;
+
