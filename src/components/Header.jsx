@@ -10,7 +10,6 @@ function Header() {
 
                 <div class="header-icons">
                     <button>🛒Destacados</button>
-                    <button>👤Mi Perfil</button>
                 </div>
 
             </header>
