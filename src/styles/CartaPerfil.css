@@ -1,0 +1,89 @@
+.carta-perfil {
+  background: linear-gradient(to right, #cceeff, #ffd6e0);
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 420px;
+  margin: 2rem auto;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Press Start 2P', cursive;
+  color: #333;
+  text-align: center;
+}
+
+.carta-perfil h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.foto-perfil {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.foto-perfil img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ff66a5;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.cambiar-foto {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: #444;
+  cursor: pointer;
+  background-color: #fff;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px dashed #aaa;
+  transition: background-color 0.3s ease;
+}
+
+.cambiar-foto:hover {
+  background-color: #f0f0f0;
+}
+
+.cambiar-foto input {
+  display: none;
+}
+
+form label {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+form input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  border: 2px solid #aaa;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 0.9rem;
+  font-family: inherit;
+}
+
+button[type="submit"] {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #ff66a5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #e05590;
+  transform: scale(1.03);
+}

@@ -8,7 +8,7 @@ function Navigate() {
             <ul className="nav-list">
                 <li><Link to="/home">Inicio</Link></li>
                 <li><Link to="/productos">Productos</Link></li>
-                <li><Link to="/perfil">Mi Perfil</Link></li>
+                <li><Link to="/Perfil">Mi Perfil</Link></li>
                 <li><Link to="/">Cerrar sesión</Link></li>
             </ul>
         </nav>

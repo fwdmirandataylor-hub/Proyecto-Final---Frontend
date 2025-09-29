@@ -1,10 +1,12 @@
 import React from 'react'
-import Car
+import CartaPerfil from '../components/CartaPerfil'
 
 function Perfil() {
   return (
     <div>
-      
+
+      <CartaPerfil />
+
     </div>
   )
 }

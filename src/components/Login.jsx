@@ -14,7 +14,7 @@ function Login() {
         const usuarios = await res.json();
 
         if (usuarios.length > 0) {
-            navigate('/home'); 
+            navigate('/home');
         } else {
             alert('Correo o contraseña incorrectos');
         }
