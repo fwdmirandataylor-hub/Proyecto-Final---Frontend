@@ -30,7 +30,7 @@ function CartaPerfil() {
           </label>
         </div>
 
-        <label>Nombre de usuario</label>
+        <label>Nombre:</label>
         <input
           type="text"
           value={nombre}
@@ -38,7 +38,7 @@ function CartaPerfil() {
           required
         />
 
-        <label>Correo electrónico</label>
+        <label>Correo electrónico:</label>
         <input
           type="email"
           value={correo}

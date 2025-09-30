@@ -7,7 +7,8 @@ function Registro() {
     nombre: '',
     correo: '',
     contraseña: '',
-    confirmar: ''
+    confirmar: '',
+    usuario: ''
   });
   const navigate = useNavigate();
 
