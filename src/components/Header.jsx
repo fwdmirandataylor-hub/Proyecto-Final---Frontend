@@ -8,7 +8,7 @@ function Header() {
             <header className='encabezado'>
                 <h1 className='header-titulo'>Swap-Book 📚</h1>
 
-                <div class="header-icons">
+                <div className="header-icons">
                     <button>🛒Destacados</button>
                 </div>
 

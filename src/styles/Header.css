@@ -15,16 +15,7 @@
 }
 
 .header-titulo {
-  font-family: 'Montserrat', Arial, sans-serif;
-  color: #2a4d69;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.2px;
-  text-align: left;
-  margin-bottom: 0;
-  display: flex;
-  align-items: center;
-  height: 100%;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 
 .header-icons {
