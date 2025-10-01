@@ -1,21 +1,61 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import '../styles/CartaPerfil.css';
 
 function CartaPerfil() {
   const [nombre, setNombre] = useState("");
   const [correo, setCorreo] = useState("");
   const [foto, setFoto] = useState(null);
+  const [idUsuario, setIdUsuario] = useState(null);
+
+
+  useEffect(() => {
+    fetch("http://localhost:3001/usuarios")
+      .then((res) => res.json())
+      .then((data) => {
+        const usuario = data[0];
+        setNombre(usuario.nombre);
+        setCorreo(usuario.correo);
+        setFoto(usuario.foto || null);
+        setIdUsuario(usuario.id);
+      });
+  }, []);
 
   const handleFotoChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      setFoto(URL.createObjectURL(file));
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setFoto(reader.result);
+      };
+      reader.readAsDataURL(file);
     }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Perfil actualizado 🎉");
+
+    const perfilActualizado = {
+      id: idUsuario,
+      nombre,
+      correo,
+      foto
+    };
+
+    fetch(`http://localhost:3001/usuarios/${idUsuario}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(perfilActualizado)
+    })
+      .then((res) => res.json())
+      .then(() => {
+        alert("Perfil actualizado 🎉");
+      })
+      .catch((error) => {
+        console.error("Error al actualizar perfil:", error);
+        alert("Hubo un error al actualizar el perfil.");
+      });
   };
 
   return (
@@ -52,5 +92,5 @@ function CartaPerfil() {
   );
 }
 
-export default CartaPerfil
+export default CartaPerfil;
 
