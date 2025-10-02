@@ -2,28 +2,41 @@
   background: linear-gradient(to right, #cceeff, #ffd6e0);
   border-radius: 16px;
   padding: 2rem;
-  max-width: 420px;
+  max-width: 800px;
+  /* más ancho */
   margin: 2rem auto;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
   font-family: 'Montserrat', Arial, sans-serif;
   color: #333;
+}
+
+/* Título centrado */
+.carta-perfil h2 {
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  color: #222;
   text-align: center;
 }
 
-.carta-perfil h2 {
-  margin-bottom: 1.5rem;
-  font-size: 1.2rem;
-  color: #222;
+/* Distribución en dos columnas */
+.carta-perfil form {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
 }
 
+/* Columna izquierda: foto */
 .foto-perfil {
-  margin-bottom: 1rem;
-  position: relative;
+  flex: 0 0 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .foto-perfil img {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid lightblue;
@@ -31,8 +44,7 @@
 }
 
 .cambiar-foto {
-  display: inline-block;
-  margin-top: 0.5rem;
+  margin-top: 0.8rem;
   font-size: 0.75rem;
   color: #444;
   cursor: pointer;
@@ -51,14 +63,19 @@
   display: none;
 }
 
-form label {
+/* Columna derecha: campos */
+.perfil-datos {
+  flex: 1;
+}
+
+.perfil-datos label {
   display: block;
   margin-top: 1rem;
   font-size: 0.85rem;
   text-align: left;
 }
 
-form input {
+.perfil-datos input {
   width: 100%;
   padding: 0.6rem;
   margin-top: 0.3rem;
@@ -69,8 +86,9 @@ form input {
   font-family: inherit;
 }
 
+/* Botón */
 button[type="submit"] {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   width: 100%;
   padding: 0.8rem;
   background: linear-gradient(90deg, #4f8edc 60%, #6fc3df 100%);

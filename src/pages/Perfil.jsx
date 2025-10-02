@@ -4,9 +4,7 @@ import CartaPerfil from '../components/CartaPerfil'
 function Perfil() {
   return (
     <div>
-
       <CartaPerfil />
-
     </div>
   )
 }

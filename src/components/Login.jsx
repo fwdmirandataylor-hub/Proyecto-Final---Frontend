@@ -21,40 +21,48 @@ function Login() {
     };
 
     return (
-        <div>
-            <div className='titulo'>
+        <>
+            <div className="page-header">
                 <h1>Bienvenido a SwapBook 📚</h1>
             </div>
-            <div className='login-container'>
-                <h2>Iniciar Sesión</h2>
-                <form onSubmit={handleSubmit}>
-                    <label htmlFor="email">Correo electrónico:</label><br />
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={email}
-                        onChange={e => setEmail(e.target.value)}
-                        required
-                    /><br /><br />
 
-                    <label htmlFor="password">Contraseña:</label><br />
-                    <input
-                        type="password"
-                        id="password"
-                        name="password"
-                        value={password}
-                        onChange={e => setPassword(e.target.value)}
-                        required
-                    /><br /><br />
+            <div className="login-wrapper">
+                <div className="login-container">
+                    <h2>Iniciar Sesión</h2>
+                    <form onSubmit={handleSubmit}>
+                        <div className="form-group">
+                            <label htmlFor="email">Correo electrónico:</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                value={email}
+                                onChange={e => setEmail(e.target.value)}
+                                required
+                            />
+                        </div>
 
-                    <button type="submit">Entrar</button>
-                </form>
-                <div className='cuenta'>
-                    <Link to="/registro">Crear cuenta</Link>
+                        <div className="form-group">
+                            <label htmlFor="password">Contraseña:</label>
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                value={password}
+                                onChange={e => setPassword(e.target.value)}
+                                required
+                            />
+                        </div>
+
+                        <button type="submit">Entrar</button>
+
+                        <div className="cuenta">
+                            <Link to="/registro">Crear cuenta</Link>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 

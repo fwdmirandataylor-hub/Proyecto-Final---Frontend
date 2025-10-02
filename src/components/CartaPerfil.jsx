@@ -2,18 +2,16 @@ import React, { useState, useEffect } from "react";
 import '../styles/CartaPerfil.css';
 
 function CartaPerfil() {
-  const [nombre, setNombre] = useState("");
   const [correo, setCorreo] = useState("");
+  const [contraseña, setContraseña] = useState("");
   const [foto, setFoto] = useState(null);
   const [idUsuario, setIdUsuario] = useState(null);
-
 
   useEffect(() => {
     fetch("http://localhost:3001/usuarios")
       .then((res) => res.json())
       .then((data) => {
         const usuario = data[0];
-        setNombre(usuario.nombre);
         setCorreo(usuario.correo);
         setFoto(usuario.foto || null);
         setIdUsuario(usuario.id);
@@ -36,8 +34,8 @@ function CartaPerfil() {
 
     const perfilActualizado = {
       id: idUsuario,
-      nombre,
       correo,
+      contraseña,
       foto
     };
 
@@ -70,27 +68,28 @@ function CartaPerfil() {
           </label>
         </div>
 
-        <label>Nombre:</label>
-        <input
-          type="text"
-          value={nombre}
-          onChange={(e) => setNombre(e.target.value)}
-          required
-        />
+        <div className="perfil-datos">
+          <label>Correo electrónico:</label>
+          <input
+            type="email"
+            value={correo}
+            onChange={(e) => setCorreo(e.target.value)}
+            required
+          />
 
-        <label>Correo electrónico:</label>
-        <input
-          type="email"
-          value={correo}
-          onChange={(e) => setCorreo(e.target.value)}
-          required
-        />
+          <label>Contraseña:</label>
+          <input
+            type="password"
+            value={contraseña}
+            onChange={(e) => setContraseña(e.target.value)}
+            required
+          />
 
-        <button type="submit">Guardar cambios</button>
+          <button type="submit">Guardar cambios</button>
+        </div>
       </form>
     </div>
   );
 }
 
 export default CartaPerfil;
-
